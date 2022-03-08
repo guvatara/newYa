@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "./dist/",
+    "lib": ["dom", "esnext"],
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "isolatedModules": true,
+    "noImplicitThis": true,
+    "strict": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es5",
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "strictNullChecks": true
+  },
+  "paths": {
+    "@components": ["./src/components"],
+    "@components/*": ["./src/components/*"],
+    "@models/*": ["./src/models/*"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
