@@ -3,8 +3,14 @@ const paths = require('./paths');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 module.exports = {
-  entry: paths.src + '/index.tsx',
+  entry: {
+    index: {
+      import: paths.src + '/index.tsx',
+    },
+  },
   devtool: 'inline-source-map',
   devServer: {
     static: paths.build + '/',
@@ -41,10 +47,21 @@ module.exports = {
       filename: 'index.html',
       title: 'Output Management',
       template: paths.template + '/template.html'
-    })
+    }),
+    new BundleAnalyzerPlugin()
   ],
+  optimization: {
+    chunkIds: 'named',
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+  stats: {
+    colors: true,
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: paths.build + '/',
     clean: true
   }
