@@ -1,8 +1,6 @@
 const paths = require('./paths');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
 module.exports = {
   entry: {
     index: {
@@ -44,8 +42,7 @@ module.exports = {
       filename: 'index.html',
       title: 'Output Management',
       template: paths.template + '/template.html'
-    }),
-    new BundleAnalyzerPlugin()
+    })
   ],
   stats: {
     colors: true,
