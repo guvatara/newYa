@@ -1,5 +1,6 @@
 import React from 'react';
 import { TEMPORARY_ANY } from '@models';
+import { Header } from '@containers';
 
 export const App: React.FC<TEMPORARY_ANY> = () => {
   const Anything = '1234';
@@ -7,6 +8,7 @@ export const App: React.FC<TEMPORARY_ANY> = () => {
 
   return (
     <div>
+      <Header />
       {Nuuke('Bo1221ooo')}
       {Anything}
     </div>
