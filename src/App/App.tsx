@@ -1,5 +1,5 @@
 import React from 'react';
-import { TEMPORARY_ANY } from '../models/_project';
+import { TEMPORARY_ANY } from '@models';
 
 export const App: React.FC<TEMPORARY_ANY> = () => {
   const Anything = '1234';
