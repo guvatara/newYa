@@ -7,7 +7,10 @@ module.exports = {
   entry: paths.src + '/index.tsx',
   devtool: 'inline-source-map',
   devServer: {
-    static: paths.build + '/'
+    static: paths.build + '/',
+    compress: true,
+    port: 9000,
+    host: '0.0.0.0',
   },
   module: {
     rules: [
