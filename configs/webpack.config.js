@@ -44,6 +44,7 @@ module.exports = {
       "@models": paths.src + '/models',
       '@containers': paths.src + '/containers',
       '@store': paths.src + '/store',
+      '@api': paths.src + '/api',
     },
   },
   plugins: [

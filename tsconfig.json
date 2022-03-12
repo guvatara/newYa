@@ -20,7 +20,8 @@
       "@components/*": ["./src/components/*"],
       "@models": ["./src/models"],
       "@containers": ["./src/containers"],
-      "@store": ["./src/store"]
+      "@store": ["./src/store"],
+      "@api": ["./src/api"]
     }
   },
   "include": ["src"],

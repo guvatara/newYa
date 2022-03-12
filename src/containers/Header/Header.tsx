@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Button } from '@mui/material';
+import { Navigation } from '../Navigation';
 
 export const Header: React.FC = () => {
   return (
-    <Box>
-      <Button>Menu</Button>
-    </Box>
+    <div>
+      <Navigation />
+    </div>
   );
 };
