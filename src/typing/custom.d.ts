@@ -1,4 +1,4 @@
-import { TEMPORARY_ANY } from '../models/_project';
+import { TEMPORARY_ANY } from '@models';
 
 declare module '*.svg' {
   const content: TEMPORARY_ANY;

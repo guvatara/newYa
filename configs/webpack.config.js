@@ -1,10 +1,14 @@
-const path = require('path');
 const paths = require('./paths');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 module.exports = {
-  entry: paths.src + '/index.tsx',
+  entry: {
+    index: {
+      import: paths.src + '/index.tsx',
+    },
+  },
   devtool: 'inline-source-map',
   devServer: {
     static: paths.build + '/',
@@ -34,17 +38,40 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      '@components': paths.src + '/components',
+      "@models": paths.src + '/models',
+      '@containers': paths.src + '/containers',
+      '@store': paths.src + '/store',
+      '@api': paths.src + '/api',
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
       title: 'Output Management',
       template: paths.template + '/template.html'
-    })
+    }),
+    new BundleAnalyzerPlugin()
   ],
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+        },
+      },
+    },
+  },
+  stats: {
+    colors: true,
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: paths.build + '/',
     clean: true
   }

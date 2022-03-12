@@ -1,14 +1,17 @@
 import React from 'react';
-import { TEMPORARY_ANY } from '../models/_project';
+import { Header } from '@containers';
 
-export const App: React.FC<TEMPORARY_ANY> = () => {
+import { AppContainer } from './styled';
+
+export const App: React.FC = () => {
   const Anything = '1234';
   const Nuuke = (name: string) => <strong>{name}</strong>;
 
   return (
-    <div>
+    <AppContainer>
+      <Header />
       {Nuuke('Bo1221ooo')}
       {Anything}
-    </div>
+    </AppContainer>
   );
 };
