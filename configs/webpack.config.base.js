@@ -36,6 +36,8 @@ module.exports = {
       '@containers': paths.src + '/containers',
       '@store': paths.src + '/store',
       '@api': paths.src + '/api',
+      '@pages': paths.src + '/pages',
+      '@assets': paths.src + '/assets',
       '@mocks': paths.src + '/_mocks',
     },
   },
