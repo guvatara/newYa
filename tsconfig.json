@@ -23,7 +23,8 @@
       "@store": ["./src/store"],
       "@api": ["./src/api"],
       "@mocks/*": ["./src/_mocks/*"],
-      "@assets/*": ["./src/assets/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@pages": ["./src/pages"]
     }
   },
   "include": ["src"],

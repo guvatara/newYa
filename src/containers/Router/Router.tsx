@@ -1,14 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import { App } from '../../App/App';
+import { BrowserRouter } from 'react-router-dom';
+/* Apps  */
+import { Header, PageController } from '@containers';
 
 export const Router: React.FC = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App />} />
-      </Routes>
+      <Header />
+      <PageController />
     </BrowserRouter>
   );
 };
