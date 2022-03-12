@@ -1,5 +1,7 @@
 import React from 'react';
-import { Navigation } from '../Navigation';
+/* Apps  */
+import { Navigation } from '@containers';
+/* Local  */
 import { HeaderContainer } from './styled';
 
 export const Header: React.FC = () => {
