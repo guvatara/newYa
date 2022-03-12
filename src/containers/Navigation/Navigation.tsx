@@ -4,7 +4,7 @@ import { Navbar, Button } from 'react-bootstrap';
 export const Navigation: React.FC = () => {
   return (
     <Navbar>
-      <Button>Menu</Button>
+      <Button variant='primary'>Menu</Button>
     </Navbar>
   );
 };

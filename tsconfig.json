@@ -21,7 +21,9 @@
       "@models": ["./src/models"],
       "@containers": ["./src/containers"],
       "@store": ["./src/store"],
-      "@api": ["./src/api"]
+      "@api": ["./src/api"],
+      "@mocks/*": ["./src/_mocks/*"],
+      "@assets/*": ["./src/assets/*"]
     }
   },
   "include": ["src"],
